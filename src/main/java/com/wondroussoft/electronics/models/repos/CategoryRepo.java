@@ -11,7 +11,5 @@ import com.wondroussoft.electronics.models.Category;
 @Repository
 public interface CategoryRepo extends CrudRepository<Category, Long> {
 	List<Category> findAll();
-
 	Optional<Category> findById(Long id);
 }
-

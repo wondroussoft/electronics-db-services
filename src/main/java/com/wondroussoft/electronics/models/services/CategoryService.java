@@ -6,5 +6,6 @@ import com.wondroussoft.electronics.models.Category;
 
 public interface CategoryService {
 	List<Category> getAllCategories();
+	Category getCategoryById(Long id);
 	void saveCategory(Category category);
 }

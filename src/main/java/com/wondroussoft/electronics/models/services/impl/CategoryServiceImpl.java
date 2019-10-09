@@ -1,6 +1,7 @@
 package com.wondroussoft.electronics.models.services.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,17 @@ public class CategoryServiceImpl implements CategoryService {
 	public void saveCategory(Category category) {
 		repoCategory.save(category);
 
+	}
+
+	@Override
+	public Category getCategoryById(Long id) {
+		// TODO Auto-generated method stub
+		Optional<Category> c = repoCategory.findById(id);
+
+		if (c.isPresent())
+			return c.get();
+
+		return null;
 	}
 
 }

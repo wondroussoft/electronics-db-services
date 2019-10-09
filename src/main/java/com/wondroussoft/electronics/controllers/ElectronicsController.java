@@ -31,17 +31,6 @@ public class ElectronicsController {
 
 	}
 
-	@GetMapping("/categories")
-	public String getElectronicsCategories(Model model) {
-
-		List<Category> categories = serviceCategory.getAllCategories();
-
-		model.addAttribute("categories", categories);
-
-		return "categories";
-
-	}
-
 	@GetMapping("/products/category/{categoryId}")
 	public String getProducts(Model model, @PathVariable(name = "categoryId") Long categoryId) {
 
